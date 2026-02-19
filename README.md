@@ -1,46 +1,45 @@
-# WB Data Collector
+WEB Data Collector
+This project is designed to collect data from the Wildberries website and save it into a CSV file.
 
-Этот проект предназначен для сбора данных с сайта Wildberries и сохранения их в CSV файл.
+Description
+The script utilizes asynchronous requests to fetch data from the Wildberries site. The collected data includes information about the brand, product name, original price, discounted price, and stock quantity. The gathered information is then saved into a CSV file.
 
-## Описание
+Installation
+Clone the repository:
 
-Скрипт использует асинхронные запросы для получения данных с сайта Wildberries. Данные включают информацию о бренде, названии, начальной цене, цене со скидкой и количестве товаров. Полученные данные сохраняются в CSV файл.
+Bash
+git clone https://github.com/minkeviiich/WB_data_collector.git
+Navigate to the project directory:
 
-## Установка
+Bash
+cd wb-data-collector
+Install the required dependencies:
 
-1. Клонируйте репозиторий:
-    ```
-    git clone https://github.com/minkeviiich/WB_data_collector.git
-    ```
-2. Перейдите в директорию проекта:
-    ```
-    cd wb-data-collector
-    ```
-3. Установите необходимые зависимости:
-    ```
-    pip install -r requirements.txt
-    ```
+Bash
+pip install -r requirements.txt
+Usage
+Run the script:
 
-## Использование
+Bash
+python main.py
+The data will be saved in the wb_data.csv file.
 
-1. Запустите скрипт:
-    ```bash
-    python main.py
-    ```
-2. Данные будут сохранены в файл `wb_data.csv`.
+Project Structure
+main.py: The main script to execute the data collection.
 
-## Структура проекта
+models.py: Data models for parsing API responses.
 
-- `main.py`: основной скрипт для запуска сбора данных.
-- `models.py`: модели данных для парсинга ответа от API.
-- `requirements.txt`: список зависимостей.
+requirements.txt: A list of project dependencies.
 
-## Пример данных
+Data Example
+The wb_data.csv file will contain the following columns:
 
-Файл `wb_data.csv` будет содержать следующие столбцы:
-- `id`: идентификатор товара
-- `Бренд`: бренд товара
-- `Название`: название товара
-- `Начальная цена`: начальная цена товара
-- `Цена со скидкой`: цена товара со скидкой
-- `Количество`: количество товара на складе
+Column	Description
+id	Unique product identifier
+Brand	The brand of the product
+Name	Product title/name
+Original Price	The starting price before discounts
+Discounted Price	The current price after discounts
+Quantity	Total items available in stock
+Would you like me to help you translate the actual Python code (variable names and CSV headers) within main.py or models.py to match this English documentation?
+
